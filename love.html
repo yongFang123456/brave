@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>给最爱的你</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            text-align: center;
+            overflow: hidden;
+        }
+        h1 {
+            color: #fff;
+            font-size: 3em;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+            margin-bottom: 20px;
+            animation: float 3s ease-in-out infinite;
+        }
+        p {
+            color: #fff;
+            font-size: 1.5em;
+            line-height: 1.6;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+        }
+        button {
+            background-color: #e74c3c;
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            font-size: 1.2em;
+            cursor: pointer;
+            border-radius: 5px;
+            margin-top: 20px;
+            transition: background-color 0.3s ease;
+        }
+        button:hover {
+            background-color: #c0392b;
+        }
+        /* 浮动动画 */
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+        /* 飘落的心形动画 */
+        .falling-hearts {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            pointer-events: none;
+        }
+        .falling-hearts span {
+            position: absolute;
+            display: block;
+            color: #e74c3c;
+            font-size: 20px;
+            animation: fall 5s linear infinite;
+        }
+        @keyframes fall {
+            0% {
+                transform: translateY(-10%);
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(110%);
+                opacity: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="falling-hearts">
+        <!-- 飘落的心形 -->
+        <span style="left: 5%; animation-delay: 0s;">❤️</span>
+        <span style="left: 15%; animation-delay: 1s;">❤️</span>
+        <span style="left: 25%; animation-delay: 2s;">❤️</span>
+        <span style="left: 35%; animation-delay: 3s;">❤️</span>
+        <span style="left: 45%; animation-delay: 4s;">❤️</span>
+        <span style="left: 55%; animation-delay: 5s;">❤️</span>
+        <span style="left: 65%; animation-delay: 6s;">❤️</span>
+        <span style="left: 75%; animation-delay: 7s;">❤️</span>
+        <span style="left: 85%; animation-delay: 8s;">❤️</span>
+        <span style="left: 95%; animation-delay: 9s;">❤️</span>
+    </div>
+
+    <div>
+        <h1>亲爱的<span>❤️</span>蕾蕾</h1>
+        <p>从我们相遇的那一刻起，我的世界就变得不一样了。</p>
+        <p>你的笑容是我每天的动力，你的声音是我最爱的旋律。</p>
+        <p>我想和你一起走过每一个春夏秋冬，分享每一个瞬间。</p>
+        <p>你愿意和我一起，继续这段美好的旅程吗？</p>
+        <button onclick="showMessage()">点击这里，告诉我你的答案</button>
+    </div>
+
+    <script>
+        function showMessage() {
+            alert("无论你的答案是什么，我都会一直爱你！❤️");
+        }
+    </script>
+</body>
+</html>
